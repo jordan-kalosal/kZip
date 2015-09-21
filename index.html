@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>StarLogo ZIP API</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jszip.min.js"></script>
+    <script type="text/javascript" src="slzip.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="filesaver.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container content-container">
+        <div class="row">
+            <div style="padding: 10px; margin: 10px; border: solid 3px #333;">
+             <input type="file" id="file_input" />
+            </div>
+                <h1>File upload results</h1>
+                <h4 id="file_title"></h4>
+                <p id="file_error"></p>
+        </div>
+        <div class="row" style="margin-top: 80px;">
+            <div class="col-md-4 col-md col output-container">
+               
+                <h5>File Contents:</h5>
+
+                <select id="file_list" class="form-control" size="20"></select>
+            </div>
+            <div class="col-md-8 col-md col">
+                <div class="row controls-container" style="margin-bottom: 10px;">
+                    <button class="btn btn-default" type="button" id="new_file">New File</button>
+                    <button class="btn btn-default" type="button" id="delete_file">Delete File</button>
+                    <button class="btn btn-default" type="button" id="save_file">Save File</button>         
+                    <button class="btn btn-default" type="button" id="export">Export ZIP</button>
+                </div>
+                <div class="file-viewer-container row">
+                    <h5>File Contents:</h5>
+                    <label>File Name: </label><input style="width: 250px; margin-bottom: 10px;" id="file_name" type="text" class="form-control">
+                    <textarea class="form-control" id="file_contents"></textarea>
+                </div>
+                <div class="image-viewer-container row">
+                    <h5>Image Preview:</h5>
+                    <img id="image_preview" src="#" alt="Some image, right?">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
